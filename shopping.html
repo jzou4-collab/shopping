@@ -1,0 +1,48 @@
+<!--
+Name: JiaHao Zou
+Date: October 25, 2025
+File: shopping.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Discount Calculator</title>
+</head>
+<body>
+  <h1>Project 3 – Shopping Discount Calculator</h1>
+
+  <h2>Questions</h2>
+  <p><strong>1.</strong> Name a situation where you would need to create an “if” statement.</p>
+  <p><em>Answer:</em> You would use an “if” statement to check conditions — for example, if a user spends more than $100, they get a discount.</p>
+
+  <p><strong>2.</strong> When comparing values, in what data type is the result stored?</p>
+  <p><em>Answer:</em> When comparing values, the result is stored as a Boolean (true or false).</p>
+
+  <script>
+    // Step 1: Ask the customer for their shopping total
+    let total = prompt("How much did you spend?");
+
+    // Convert input to a number
+    total = Number(total);
+
+    // Step 2: Confirm the total
+    let confirmed = confirm("$" + total + " total? Click OK to continue");
+
+    // Step 3–5: Use if/else statements for discounts
+    if (confirmed) {
+      if (total >= 100) {
+        alert("20% off");
+      } else if (total >= 50) {
+        alert("10% off");
+      } else {
+        alert("No discount");
+      }
+    } else {
+      alert("You canceled the confirmation.");
+    }
+  </script>
+</body>
+</html>
